@@ -5,6 +5,7 @@ group :development, :test do
   gem 'puppet-lint',            :require => false
   gem 'rake', '~> 10.1.1',      :require => false
   gem 'rspec-puppet',           :require => false
+  gem 'rspec', '< 2.99',        :require => false
 end
 
 if puppetversion = ENV['PUPPET_GEM_VERSION']
