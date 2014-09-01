@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::dhcp
+# == Class: stacktira::firewall::dhcp
 #
 # Sets firewall rules that are needed for dhcp
 # agent in linuxbridge plugin mode to work
@@ -9,7 +9,7 @@
 #   allowing all udp traffic on ports 67 and 68
 #   through the firewall.
 #
-class openstacklib::firewall::dhcp(
+class stacktira::firewall::dhcp(
   $linuxbridge_dhcp = false
 )
 {

@@ -1,4 +1,4 @@
-# == Class: openstacklib::ntp
+# == Class: stacktira::ntp
 #
 # Manage ntpdate package and update cron job.
 #
@@ -32,7 +32,7 @@
 #   (optional)
 #   Defaults to '*'.
 #
-class openstacklib::ntp(
+class stacktira::ntp(
   $package_ensure = 'installed',
   $package_name   = 'ntpdate',
   $minute        = '*/30',

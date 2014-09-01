@@ -1,4 +1,4 @@
-# == Define: openstacklib::openstack::service_auth
+# == Define: stacktira::openstack::service_auth
 #
 # This type creates a service user, grants it the admin role
 # and then creates service and endpoint entries in keystone.
@@ -62,7 +62,7 @@
 # no service user will be created (eg for keystone)
 # Defaults to 'services'
 #
-define openstacklib::openstack::service_auth(
+define stacktira::openstack::service_auth(
   $project,
   $public_ip,
   $private_ip,

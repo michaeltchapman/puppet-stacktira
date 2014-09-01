@@ -34,7 +34,7 @@
 # [*neutron_endpoint_type*]
 #   (optional) Defaults to 'publicURL'.
 #
-class openstacklib::openstack::auth_file(
+class stacktira::openstack::auth_file(
   $admin_password,
   $controller_node          = '127.0.0.1',
   $keystone_admin_token     = undef,
@@ -53,6 +53,6 @@ class openstacklib::openstack::auth_file(
     owner   => 'root',
     group   => 'root',
     mode    => '0700',
-    content => template('openstacklib/openrc.erb')
+    content => template('stacktira/openrc.erb')
   }
 }

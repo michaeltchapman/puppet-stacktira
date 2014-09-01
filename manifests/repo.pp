@@ -1,4 +1,4 @@
-# == Class: openstacklib::repo
+# == Class: stacktira::repo
 #
 # This repo sets up RDO and UCA repositories on
 # the approriate platforms. It currently supports
@@ -26,7 +26,7 @@
 #   (optional) Port to use for apt proxy if set
 #   Defaults to undef
 #
-class openstacklib::repo (
+class stacktira::repo (
   $yum_http_proxy = undef,
   $yum_base_mirror = 'http://mirror.aarnet.edu.au',
   $yum_epel_mirror = 'http://mirror.aarnet.edu.au',
@@ -34,7 +34,7 @@ class openstacklib::repo (
   $apt_proxy_port = undef,
 ) {
   if $::osfamily == 'Debian' {
-    include openstacklib::repo::uca
+    include stacktira::repo::uca
 
       if $apt_proxy_host {
         include apt
@@ -42,8 +42,8 @@ class openstacklib::repo (
   }
 
   if $::osfamily == 'RedHat' {
-      include openstacklib::repo::rdo
-      include openstacklib::repo::epel
+      include stacktira::repo::rdo
+      include stacktira::repo::epel
 
       if $yum_epel_mirror {
         Yumrepo<| title == 'epel' |> {

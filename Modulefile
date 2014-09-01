@@ -1,11 +1,11 @@
-name    'puppet-openstacklib'
+name    'puppet-stacktira'
 version '0.0.1'
 source 'none'
 author 'Michael Chapman'
 license 'Apache License, Version 2.0'
 summary 'Helper classes for deploying Openstack with Puppet'
 description 'Helper classes for deploying Openstack with Puppet'
-project_page 'https://github.com/michaeltchapman/puppet-openstacklib'
+project_page 'https://github.com/michaeltchapman/puppet-stacktira'
 
 # Dependencies
 dependency 'stackforge/keystone'

@@ -1,4 +1,4 @@
-# == Define: openstacklib::openstack::region_auth
+# == Define: stacktira::openstack::region_auth
 #
 # This defined type will create all the endpoints for
 # the list of services passed in, with its title
@@ -72,7 +72,7 @@
 # (Optional) The password for the ceilometer service user
 # Defaults to 'password'
 #
-define openstacklib::openstack::region_auth(
+define stacktira::openstack::region_auth(
   $public_ip,
   $private_ip,
   $services,

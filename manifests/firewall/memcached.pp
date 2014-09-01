@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::memcached
+# == Class: stacktira::firewall::memcached
 #
 # Sets firewall rules for memcached
 #
@@ -14,7 +14,7 @@
 #   (optional) The port to open for memcached
 #   Defaults to 11211
 #
-class openstacklib::firewall::memcached(
+class stacktira::firewall::memcached(
   $source,
   $memcached_port = 11211,
 )

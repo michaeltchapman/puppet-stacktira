@@ -1,4 +1,4 @@
-# == Class openstacklib::puppet::master
+# == Class stacktira::puppet::master
 #
 # this class configures a machine
 # as a puppetmaster.
@@ -12,7 +12,7 @@
 #   (optional) the fqdn of the puppet master
 #   Defaults to $::fqdn
 #
-class openstacklib::puppet::master (
+class stacktira::puppet::master (
   $puppetlabs_repo = true,
   $puppet_master_address = $::fqdn,
 ) {
@@ -70,14 +70,14 @@ class openstacklib::puppet::master (
     file { '/etc/puppet/auth.conf':
       owner     => root,
       group     => root,
-      content   => template('openstacklib/auth.conf.erb'),
+      content   => template('stacktira/auth.conf.erb'),
       require   => File[$::puppet::params::confdir],
       notify    => Service[$::puppet::params::puppet_master_service],
     }
     file { '/etc/puppet/fileserver.conf':
       owner     => root,
       group     => root,
-      content   => template('openstacklib/fileserver.conf.erb'),
+      content   => template('stacktira/fileserver.conf.erb'),
       require   => File[$::puppet::params::confdir],
       notify    => Service[$::puppet::params::puppet_master_service],
     }

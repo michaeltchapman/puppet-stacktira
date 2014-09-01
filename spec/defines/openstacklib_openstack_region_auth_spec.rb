@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'openstacklib::openstack::region_auth' do
+describe 'stacktira::openstack::region_auth' do
 
   let :default_params do
   {
@@ -38,23 +38,23 @@ describe 'openstacklib::openstack::region_auth' do
       })
     end
 
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/keystone').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/keystone').with(
       :public_ip  => '11.2.3.5',
       :private_ip => '11.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/glance').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/glance').with(
       :public_ip  => '11.2.3.5',
       :private_ip => '11.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/nova').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/nova').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/cinder').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/cinder').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/neutron').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/neutron').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}
@@ -77,39 +77,39 @@ describe 'openstacklib::openstack::region_auth' do
       })
     end
 
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/keystone').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/keystone').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/glance').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/glance').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/nova').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/nova').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/cinder').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/cinder').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/neutron').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/neutron').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/heat').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/heat').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/heat-cfn').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/heat-cfn').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/ceilometer').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/ceilometer').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}
-    it { should contain_openstacklib__openstack__service_auth('regiontwo/ec2').with(
+    it { should contain_stacktira__openstack__service_auth('regiontwo/ec2').with(
       :public_ip  => '10.2.3.5',
       :private_ip => '10.3.3.5'
     )}

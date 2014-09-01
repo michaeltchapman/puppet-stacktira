@@ -13,7 +13,7 @@
 # [floating_ip] Rather to test flating ip address allocation. Optional.
 #   Defaults to true.
 #
-class openstacklib::openstack::test_file(
+class stacktira::openstack::test_file(
   $path         = '/tmp/test_nova.sh',
   $rc_file_path = '/root/openrc',
   $image_type   = 'cirros',
@@ -23,7 +23,7 @@ class openstacklib::openstack::test_file(
 ) {
 
   file { $path:
-    content => template('openstacklib/test_nova.sh.erb'),
+    content => template('stacktira/test_nova.sh.erb'),
     mode    => '0751',
   }
 

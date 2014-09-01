@@ -1,4 +1,4 @@
-# == Class: openstacklib::openstack::singleton
+# == Class: stacktira::openstack::singleton
 #
 # This is a class for dealing with OpenStack services
 # that don't scale at all. Rather than deal with passive
@@ -17,7 +17,7 @@
 # only run on a single node
 # Defaults to undef
 #
-class openstacklib::openstack::singleton(
+class stacktira::openstack::singleton(
   $cluster_master = $::fqdn,
   $service_title  = undef
 ) {

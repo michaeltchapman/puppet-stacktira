@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy::ceilometer
+# == Class: stacktira::loadbalance::haproxy::ceilometer
 #
 # Provides load balancing for ceilometer
 #
@@ -55,7 +55,7 @@
 #   listen section for internal comms
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy::ceilometer(
+class stacktira::loadbalance::haproxy::ceilometer(
   $vip,
   $cluster_addresses,
   $cluster_names,
@@ -69,7 +69,7 @@ class openstacklib::loadbalance::haproxy::ceilometer(
   $int_bind_options   = undef,
 )
 {
-  openstacklib::loadbalance::haproxy_service { 'ceilometer':
+  stacktira::loadbalance::haproxy_service { 'ceilometer':
     vip               => $vip,
     balancer_ports    => $ports,
     listen_options    => $listen_options,
@@ -82,7 +82,7 @@ class openstacklib::loadbalance::haproxy::ceilometer(
   }
 
   if $internal_vip {
-    openstacklib::loadbalance::haproxy_service { 'ceilometer-internal':
+    stacktira::loadbalance::haproxy_service { 'ceilometer-internal':
       vip               => $internal_vip,
       balancer_ports    => $ports,
       listen_options    => $listen_options,

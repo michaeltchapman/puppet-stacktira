@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'openstacklib::openstack::auth_file' do
+describe 'stacktira::openstack::auth_file' do
 
   describe "when only passing default class parameters" do
 

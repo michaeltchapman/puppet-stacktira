@@ -1,4 +1,4 @@
-# == Class: openstacklib::openstack::regions
+# == Class: stacktira::openstack::regions
 #
 # This is a wrapper class for creating multiple regions
 # in keystone, each with their own endpoints and service
@@ -75,7 +75,7 @@
 # (Optional) Tenant for service users
 # Defaults to 'services'
 #
-class openstacklib::openstack::regions(
+class stacktira::openstack::regions(
   $regions_hash,
   $keystone_user_pw     = 'password',
   $nova_user_pw         = 'password',
@@ -116,5 +116,5 @@ class openstacklib::openstack::regions(
     'ceilometer_user_pw' => $ceilometer_user_pw,
   }
 
-  create_resources(openstacklib::openstack::region_auth, $regions_hash, $defaults)
+  create_resources(stacktira::openstack::region_auth, $regions_hash, $defaults)
 }

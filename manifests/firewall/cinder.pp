@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::cinder
+# == Class: stacktira::firewall::cinder
 #
 # Sets firewall rules for cinder
 #
@@ -14,7 +14,7 @@
 #   (optional) The port to open for cinder_api
 #   Defaults to 8776
 #
-class openstacklib::firewall::cinder(
+class stacktira::firewall::cinder(
   $source,
   $internal_source = undef,
   $cinder_api      = 8776,

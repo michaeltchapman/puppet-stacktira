@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'openstacklib::repo::uca' do
+describe 'stacktira::repo::uca' do
 
   describe 'Ubuntu with defaults' do
 

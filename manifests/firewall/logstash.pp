@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::logstash
+# == Class: stacktira::firewall::logstash
 #
 # Sets firewall rules for logstash forwarder input
 #
@@ -14,7 +14,7 @@
 #   (optional) The port to open for logstash forwarder
 #   Defaults to 25000
 #
-class openstacklib::firewall::logstash(
+class stacktira::firewall::logstash(
   $source,
   $internal_source      = undef,
   $logstash_port   = 25000,

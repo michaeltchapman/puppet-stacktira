@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'openstacklib::openstack::regions' do
+describe 'stacktira::openstack::regions' do
   let :pre_condition do
     "class { 'keystone::roles::admin':
        password => 'test',
@@ -32,7 +32,7 @@ describe 'openstacklib::openstack::regions' do
       }
     end
 
-    it { should contain_openstacklib__openstack__region_auth('RegionOne')}
-    it { should contain_openstacklib__openstack__region_auth('RegionTwo')}
+    it { should contain_stacktira__openstack__region_auth('RegionOne')}
+    it { should contain_stacktira__openstack__region_auth('RegionTwo')}
   end
 end

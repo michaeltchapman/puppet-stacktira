@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::ssh
+# == Class: stacktira::firewall::ssh
 #
 # Sets firewall rules for ssh access
 #
@@ -9,7 +9,7 @@
 #   (optional) The port to open for ssh
 #   Defaults to 22
 #
-class openstacklib::firewall::ssh(
+class stacktira::firewall::ssh(
   $source,
   $ssh_port = 22,
 )

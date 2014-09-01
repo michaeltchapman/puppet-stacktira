@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy::keystone
+# == Class: stacktira::loadbalance::haproxy::keystone
 #
 # Provides load balancing for keystone
 #
@@ -59,7 +59,7 @@
 #   listen section for internal comms
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy::keystone
+class stacktira::loadbalance::haproxy::keystone
 (
   $vip,
   $cluster_addresses,
@@ -77,7 +77,7 @@ class openstacklib::loadbalance::haproxy::keystone
   $int_bind_options   = undef,
 )
 {
-  openstacklib::loadbalance::haproxy_service { 'keystone-public':
+  stacktira::loadbalance::haproxy_service { 'keystone-public':
     vip               => $vip,
     balancer_ports    => [$public_port],
     listen_options    => $listen_options,
@@ -90,7 +90,7 @@ class openstacklib::loadbalance::haproxy::keystone
   }
 
   if $internal_vip {
-    openstacklib::loadbalance::haproxy_service { 'keystone-public-internal':
+    stacktira::loadbalance::haproxy_service { 'keystone-public-internal':
       vip               => $internal_vip,
       balancer_ports    => [$public_port],
       listen_options    => $listen_options,
@@ -102,7 +102,7 @@ class openstacklib::loadbalance::haproxy::keystone
       bind_options      => $int_bind_options
     }
 
-    openstacklib::loadbalance::haproxy_service { 'keystone-admin-internal':
+    stacktira::loadbalance::haproxy_service { 'keystone-admin-internal':
       vip               => $internal_vip,
       balancer_ports    => [$admin_port],
       listen_options    => $listen_options,
@@ -115,7 +115,7 @@ class openstacklib::loadbalance::haproxy::keystone
     }
   } else {
     notice('Keystone admin api is being placed on public vip.')
-    openstacklib::loadbalance::haproxy_service { 'keystone-admin-internal':
+    stacktira::loadbalance::haproxy_service { 'keystone-admin-internal':
       vip               => $vip,
       balancer_ports    => [$admin_port],
       listen_options    => $listen_options,

@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::elasticsearch
+# == Class: stacktira::firewall::elasticsearch
 #
 # Sets firewall rules for elasticsearch
 #
@@ -14,7 +14,7 @@
 #   (optional) The port to open for glance api
 #   Defaults to 9200
 #
-class openstacklib::firewall::elasticsearch(
+class stacktira::firewall::elasticsearch(
   $source,
   $internal_source      = undef,
   $elasticsearch_port   = 9200,

@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy::dashboard
+# == Class: stacktira::loadbalance::haproxy::dashboard
 #
 # Provides load balancing for dashboard
 #
@@ -68,7 +68,7 @@
 #   to append to the end
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy::dashboard(
+class stacktira::loadbalance::haproxy::dashboard(
   $vip,
   $cluster_addresses,
   $cluster_names,
@@ -132,7 +132,7 @@ class openstacklib::loadbalance::haproxy::dashboard(
       define_cookies    => $balancer_cookie
     }
   } else {
-    openstacklib::loadbalance::haproxy_service { 'dashboard':
+    stacktira::loadbalance::haproxy_service { 'dashboard':
       vip               => $vip,
       balancer_ports    => $ports,
       listen_options    => $listen_options,

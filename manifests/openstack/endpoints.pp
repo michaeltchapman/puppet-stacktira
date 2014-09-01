@@ -1,4 +1,4 @@
-# == Class: openstacklib::openstack::endpoints
+# == Class: stacktira::openstack::endpoints
 #
 # This class Configures endpoints
 # for the specified services
@@ -10,7 +10,7 @@
 #   Accepts elements: cinder,glance,keystone,nova, network, and all.
 #   Defaults to ['cinder', 'glance', 'keystone', 'nova', 'neutron']
 #
-class openstacklib::openstack::endpoints (
+class stacktira::openstack::endpoints (
   $enabled_services = [
     'cinder', 'glance', 'keystone', 'nova', 'neutron'
   ],
@@ -20,7 +20,7 @@ class openstacklib::openstack::endpoints (
   # convention of the other services
   $real_enabled_services = delete($enabled_services, 'keystone')
 
-  openstacklib::openstack::keystone_endpoint { $real_enabled_services: }
+  stacktira::openstack::keystone_endpoint { $real_enabled_services: }
 
   include ::keystone::endpoint
   include ::keystone::roles::admin

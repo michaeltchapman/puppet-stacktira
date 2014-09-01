@@ -22,7 +22,7 @@
 #   (optional) Install the Neutron client package
 #
 
-class openstacklib::openstack::client (
+class stacktira::openstack::client (
   $ceilometer = true,
   $cinder = true,
   $glance = true,

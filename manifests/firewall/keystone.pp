@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::keystone
+# == Class: stacktira::firewall::keystone
 #
 # Sets firewall rules for keystone
 #
@@ -18,7 +18,7 @@
 #   (optional) The port to open for keystone admin api
 #   Defaults to 35357
 #
-class openstacklib::firewall::keystone(
+class stacktira::firewall::keystone(
   $source,
   $internal_source = undef,
   $keystone_public = 5000,

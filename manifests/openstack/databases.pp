@@ -1,4 +1,4 @@
-# == Class: openstacklib::openstack::databases
+# == Class: stacktira::openstack::databases
 #
 # Given a list of services and db type, this class will include
 # the db class of the correct type from the service module
@@ -15,7 +15,7 @@
 #   Valid options are 'mysql' and 'postgres'
 #   Defaults to 'mysql'
 #
-class openstacklib::openstack::databases(
+class stacktira::openstack::databases(
   $enabled_services = [
     'cinder', 'glance', 'keystone', 'nova', 'neutron'
   ],
@@ -26,7 +26,7 @@ class openstacklib::openstack::databases(
 # as one of their enabled_services
   $real_enabled_services = delete($enabled_services, 'swift')
 
-  openstacklib::openstack::database { $real_enabled_services:
+  stacktira::openstack::database { $real_enabled_services:
     db_type => $db_type,
   }
 }

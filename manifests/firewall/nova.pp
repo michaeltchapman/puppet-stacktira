@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::nova
+# == Class: stacktira::firewall::nova
 #
 # Sets firewall rules for nova
 #
@@ -26,7 +26,7 @@
 #   (optional) The port to open for novnc proxy
 #   Defaults to 6080
 #
-class openstacklib::firewall::nova(
+class stacktira::firewall::nova(
   $source,
   $internal_source = undef,
   $api_port        = 8774,

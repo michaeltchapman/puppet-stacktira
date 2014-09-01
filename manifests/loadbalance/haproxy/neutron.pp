@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy::neutron
+# == Class: stacktira::loadbalance::haproxy::neutron
 #
 # Provides load balancing for neutron
 #
@@ -55,7 +55,7 @@
 #   listen section for internal comms
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy::neutron
+class stacktira::loadbalance::haproxy::neutron
 (
   $vip,
   $cluster_addresses,
@@ -70,7 +70,7 @@ class openstacklib::loadbalance::haproxy::neutron
   $int_bind_options   = undef,
 )
 {
-  openstacklib::loadbalance::haproxy_service { 'neutron':
+  stacktira::loadbalance::haproxy_service { 'neutron':
     vip               => $vip,
     balancer_ports    => $ports,
     listen_options    => $listen_options,
@@ -83,7 +83,7 @@ class openstacklib::loadbalance::haproxy::neutron
   }
 
   if $internal_vip {
-    openstacklib::loadbalance::haproxy_service { 'neutron-internal':
+    stacktira::loadbalance::haproxy_service { 'neutron-internal':
       vip               => $internal_vip,
       balancer_ports    => $ports,
       listen_options    => $listen_options,

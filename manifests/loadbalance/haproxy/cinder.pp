@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy::cinder
+# == Class: stacktira::loadbalance::haproxy::cinder
 #
 # Provides load balancing for cinder
 #
@@ -55,7 +55,7 @@
 #   listen section for internal comms
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy::cinder(
+class stacktira::loadbalance::haproxy::cinder(
   $vip,
   $cluster_addresses,
   $cluster_names,
@@ -69,7 +69,7 @@ class openstacklib::loadbalance::haproxy::cinder(
   $int_bind_options   = undef,
 )
 {
-  openstacklib::loadbalance::haproxy_service { 'cinder':
+  stacktira::loadbalance::haproxy_service { 'cinder':
     vip               => $vip,
     balancer_ports    => $ports,
     listen_options    => $listen_options,
@@ -82,7 +82,7 @@ class openstacklib::loadbalance::haproxy::cinder(
   }
 
   if $internal_vip {
-    openstacklib::loadbalance::haproxy_service { 'cinder-internal':
+    stacktira::loadbalance::haproxy_service { 'cinder-internal':
       vip               => $internal_vip,
       balancer_ports    => $ports,
       listen_options    => $listen_options,

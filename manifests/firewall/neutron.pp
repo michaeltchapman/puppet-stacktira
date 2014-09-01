@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::neutron
+# == Class: stacktira::firewall::neutron
 #
 # Sets firewall rules for neutron
 #
@@ -14,7 +14,7 @@
 #   (optional) The port to open for neutron api
 #   Defaults to 9696
 #
-class openstacklib::firewall::neutron(
+class stacktira::firewall::neutron(
   $source,
   $internal_source = undef,
   $neutron_api     = 9696,

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'openstacklib::openstack::client' do
+describe 'stacktira::openstack::client' do
 
   let :facts do
     { :osfamily => 'Debian', :operatingsystem => 'Ubuntu' }

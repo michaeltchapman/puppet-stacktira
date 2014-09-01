@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::glance
+# == Class: stacktira::firewall::glance
 #
 # Sets firewall rules for glance
 #
@@ -18,7 +18,7 @@
 #   (optional) The port to open for glance registry
 #   Defaults to 9292
 #
-class openstacklib::firewall::glance(
+class stacktira::firewall::glance(
   $source,
   $internal_source = undef,
   $glance_api      = 9292,

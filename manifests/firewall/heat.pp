@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::heat
+# == Class: stacktira::firewall::heat
 #
 # Sets firewall rules for heat
 #
@@ -18,7 +18,7 @@
 #   (optional) The port to open for heat cloudformation api
 #   Defaults to 8000
 #
-class openstacklib::firewall::heat(
+class stacktira::firewall::heat(
   $source,
   $internal_source = undef,
   $heat_api        = 8004,

@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy::elasticsearch
+# == Class: stacktira::loadbalance::haproxy::elasticsearch
 #
 # Provides load balancing for elasticsearch
 #
@@ -44,7 +44,7 @@
 #   listen section
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy::elasticsearch(
+class stacktira::loadbalance::haproxy::elasticsearch(
   $vip,
   $cluster_addresses,
   $cluster_names,
@@ -57,7 +57,7 @@ class openstacklib::loadbalance::haproxy::elasticsearch(
 )
 {
   if $elasticsearch_port {
-    openstacklib::loadbalance::haproxy_service { 'elasticsearch':
+    stacktira::loadbalance::haproxy_service { 'elasticsearch':
       vip               => $vip,
       balancer_ports    => $elasticsearch_port,
       listen_options    => $listen_options,

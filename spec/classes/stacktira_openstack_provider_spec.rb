@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'openstacklib::openstack::provider' do
+describe 'stacktira::openstack::provider' do
 
   context 'with defaults' do
     let :pre_condition do

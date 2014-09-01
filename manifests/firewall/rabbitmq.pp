@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::rabbitmq
+# == Class: stacktira::firewall::rabbitmq
 #
 # Sets firewall rules for rabbitmq
 #
@@ -28,7 +28,7 @@
 #   clustering
 #   Defaults to 9105
 #
-class openstacklib::firewall::rabbitmq(
+class stacktira::firewall::rabbitmq(
   $source,
   $rabbit_port  = 5672,
   $epmd_port    = 4369,

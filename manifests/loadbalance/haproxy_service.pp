@@ -1,9 +1,9 @@
-# == Type openstacklib::loadbalance::haproxy_service
+# == Type stacktira::loadbalance::haproxy_service
 #
 # Creates a pair of types from the haproxy module
 # with the supplied parameters
 #
-define openstacklib::loadbalance::haproxy_service (
+define stacktira::loadbalance::haproxy_service (
   $vip,
   $balancer_ports,
   $cluster_addresses,

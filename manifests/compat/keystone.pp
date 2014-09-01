@@ -1,4 +1,4 @@
-# == Class: openstacklib::compat::keystone
+# == Class: stacktira::compat::keystone
 #
 # This class is used to massage compatibility between versions,
 # so that the puppet modules can remain on master and move from
@@ -10,7 +10,7 @@
 #   (optional) The version of openstack to be installed
 #   Defaults to 'havana'
 #
-class openstacklib::compat::keystone(
+class stacktira::compat::keystone(
   $openstack_release = 'havana',
 ) {
   case $openstack_release {

@@ -1,11 +1,11 @@
-# == Class: openstacklib::firewall::nova
+# == Class: stacktira::firewall::nova
 #
 # Sets firewall rules for nova
 #
 # [*interface*]
 #   (required) Interface to allow traffic on
 #
-class openstacklib::firewall::compute(
+class stacktira::firewall::compute(
   $interface
 )
 {

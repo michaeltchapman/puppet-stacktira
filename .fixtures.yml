@@ -19,4 +19,4 @@ fixtures:
     'keepalived' : 'git://github.com/arioch/puppet-keepalived'
     'sysctl'     : 'git://github.com/thias/puppet-sysctl'
   symlinks:
-    'openstacklib' : "#{source_dir}"
+    'stacktira' : "#{source_dir}"

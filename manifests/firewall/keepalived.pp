@@ -1,8 +1,8 @@
-# == Class: openstacklib::firewall::keepalived
+# == Class: stacktira::firewall::keepalived
 #
 # Sets firewall rules for keepalived (allow all vrrp)
 #
-class openstacklib::firewall::keepalived(
+class stacktira::firewall::keepalived(
 ) {
 
     firewall { '400 keepalived accept vrrp':

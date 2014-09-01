@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'openstacklib::hosts' do
+describe 'stacktira::hosts' do
   let :params do
     {
       :build_server_ip   => '192.168.1.1',

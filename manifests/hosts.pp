@@ -1,4 +1,4 @@
-# == Class: openstacklib::hosts
+# == Class: stacktira::hosts
 #
 # Puppet can be sensetive to the ordering in /etc/hosts as
 # it can affect the fqdn fact. This class will add the control
@@ -28,7 +28,7 @@
 #   (optional) Hostname of the build-server
 #   Defaults to 'build-server'
 #
-class openstacklib::hosts (
+class stacktira::hosts (
   $build_server_ip   = false,
   $cluster_hash      = false,
   $domain            = false,
@@ -42,7 +42,7 @@ class openstacklib::hosts (
       ensure  => present,
       owner   => root,
       group   => root,
-      content => template('openstacklib/hosts.erb'),
+      content => template('stacktira/hosts.erb'),
     } -> Package<||>
   }
 

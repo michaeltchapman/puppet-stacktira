@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy::heat
+# == Class: stacktira::loadbalance::haproxy::heat
 #
 # Provides load balancing for heat
 #
@@ -57,7 +57,7 @@
 #   listen section for internal comms
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy::heat(
+class stacktira::loadbalance::haproxy::heat(
   $vip,
   $cluster_addresses,
   $cluster_names,
@@ -73,7 +73,7 @@ class openstacklib::loadbalance::haproxy::heat(
 )
 {
   if $heat_port {
-    openstacklib::loadbalance::haproxy_service { 'heat-api':
+    stacktira::loadbalance::haproxy_service { 'heat-api':
       vip               => $vip,
       balancer_ports    => [$heat_port],
       listen_options    => $listen_options,
@@ -87,7 +87,7 @@ class openstacklib::loadbalance::haproxy::heat(
   }
 
   if $cfn_port {
-    openstacklib::loadbalance::haproxy_service { 'heat-cfn-internal':
+    stacktira::loadbalance::haproxy_service { 'heat-cfn-internal':
       vip               => $internal_vip,
       balancer_ports    => [$cfn_port],
       listen_options    => $listen_options,
@@ -102,7 +102,7 @@ class openstacklib::loadbalance::haproxy::heat(
 
   if $internal_vip {
     if $heat_port {
-      openstacklib::loadbalance::haproxy_service { 'heat-api-internal':
+      stacktira::loadbalance::haproxy_service { 'heat-api-internal':
         vip               => $internal_vip,
         balancer_ports    => [$heat_port],
         listen_options    => $listen_options,
@@ -116,7 +116,7 @@ class openstacklib::loadbalance::haproxy::heat(
     }
 
     if $cfn_port {
-      openstacklib::loadbalance::haproxy_service { 'heat-cfn':
+      stacktira::loadbalance::haproxy_service { 'heat-cfn':
         vip               => $vip,
         balancer_ports    => [$cfn_port],
         listen_options    => $listen_options,

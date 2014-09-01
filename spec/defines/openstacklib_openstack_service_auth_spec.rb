@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'openstacklib::openstack::service_auth' do
+describe 'stacktira::openstack::service_auth' do
   describe 'when defining a service without a user' do
     let :title do
       'regiontwo/keystone'

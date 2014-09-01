@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy::nova
+# == Class: stacktira::loadbalance::haproxy::nova
 #
 # Provides load balancing for nova
 #
@@ -71,7 +71,7 @@
 #   listen section for internal comms
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy::nova
+class stacktira::loadbalance::haproxy::nova
 (
   $vip,
   $cluster_addresses,
@@ -92,7 +92,7 @@ class openstacklib::loadbalance::haproxy::nova
 {
 
   if $nova_port {
-    openstacklib::loadbalance::haproxy_service { 'nova-api':
+    stacktira::loadbalance::haproxy_service { 'nova-api':
       vip               => $vip,
       balancer_ports    => [$nova_port],
       listen_options    => $listen_options,
@@ -106,7 +106,7 @@ class openstacklib::loadbalance::haproxy::nova
   }
 
   if $ec2_port {
-    openstacklib::loadbalance::haproxy_service { 'nova-ec2':
+    stacktira::loadbalance::haproxy_service { 'nova-ec2':
       vip               => $vip,
       balancer_ports    => [$ec2_port],
       listen_options    => $listen_options,
@@ -120,7 +120,7 @@ class openstacklib::loadbalance::haproxy::nova
   }
 
   if $vncproxy_port {
-    openstacklib::loadbalance::haproxy_service { 'nova-novnc':
+    stacktira::loadbalance::haproxy_service { 'nova-novnc':
       vip               => $vip,
       balancer_ports    => [$vncproxy_port],
       listen_options    => $listen_options,
@@ -134,7 +134,7 @@ class openstacklib::loadbalance::haproxy::nova
   }
 
   if $metadata_port {
-    openstacklib::loadbalance::haproxy_service { 'nova-metadata':
+    stacktira::loadbalance::haproxy_service { 'nova-metadata':
       vip               => $vip,
       balancer_ports    => [$metadata_port],
       listen_options    => $listen_options,
@@ -148,7 +148,7 @@ class openstacklib::loadbalance::haproxy::nova
   }
 
   if $objectstore_port {
-    openstacklib::loadbalance::haproxy_service { 'nova-objectstore':
+    stacktira::loadbalance::haproxy_service { 'nova-objectstore':
       vip               => $vip,
       balancer_ports    => [$objectstore_port],
       listen_options    => $listen_options,
@@ -163,7 +163,7 @@ class openstacklib::loadbalance::haproxy::nova
 
   if $internal_vip {
     if $nova_port {
-      openstacklib::loadbalance::haproxy_service { 'nova-api-internal':
+      stacktira::loadbalance::haproxy_service { 'nova-api-internal':
         vip               => $internal_vip,
         balancer_ports    => [$nova_port],
         listen_options    => $listen_options,
@@ -177,7 +177,7 @@ class openstacklib::loadbalance::haproxy::nova
     }
 
     if $ec2_port {
-      openstacklib::loadbalance::haproxy_service { 'nova-ec2-internal':
+      stacktira::loadbalance::haproxy_service { 'nova-ec2-internal':
         vip               => $internal_vip,
         balancer_ports    => [$ec2_port],
         listen_options    => $listen_options,
@@ -191,7 +191,7 @@ class openstacklib::loadbalance::haproxy::nova
     }
 
     if $vncproxy_port {
-      openstacklib::loadbalance::haproxy_service { 'nova-novnc-internal':
+      stacktira::loadbalance::haproxy_service { 'nova-novnc-internal':
         vip               => $internal_vip,
         balancer_ports    => [$vncproxy_port],
         listen_options    => $listen_options,
@@ -205,7 +205,7 @@ class openstacklib::loadbalance::haproxy::nova
     }
 
     if $metadata_port {
-      openstacklib::loadbalance::haproxy_service { 'nova-metadata-internal':
+      stacktira::loadbalance::haproxy_service { 'nova-metadata-internal':
         vip               => $internal_vip,
         balancer_ports    => [$metadata_port],
         listen_options    => $listen_options,
@@ -219,7 +219,7 @@ class openstacklib::loadbalance::haproxy::nova
     }
 
     if $objectstore_port {
-      openstacklib::loadbalance::haproxy_service { 'nova-objectstore-internal':
+      stacktira::loadbalance::haproxy_service { 'nova-objectstore-internal':
         vip               => $internal_vip,
         balancer_ports    => [$objectstore_port],
         listen_options    => $listen_options,

@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::base
+# == Class: stacktira::firewall::base
 #
 # Sets firewall rules for basic system functionality
 # including loopback, icmp, and established connections
@@ -22,7 +22,7 @@
 #   (optional) Whether to drop all non-matching traffic
 #   Defaults to true
 #
-class openstacklib::firewall::base(
+class stacktira::firewall::base(
   $related  = true,
   $loopback = true,
   $icmp     = true,

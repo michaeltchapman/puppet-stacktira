@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::dashboard
+# == Class: stacktira::firewall::dashboard
 #
 # Sets firewall rules for Dashboard
 #
@@ -13,7 +13,7 @@
 #   (optional) The port to open for httpd
 #   Defaults to 443
 #
-class openstacklib::firewall::dashboard(
+class stacktira::firewall::dashboard(
   $source,
   $httpd_port     = 80,
   $https_port     = 443,

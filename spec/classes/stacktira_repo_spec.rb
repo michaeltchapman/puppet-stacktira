@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'openstacklib::repo' do
+describe 'stacktira::repo' do
   let :default_params do
     {
       :yum_base_mirror => 'http://mirror.aarnet.edu.au',
@@ -22,8 +22,8 @@ describe 'openstacklib::repo' do
         {}.merge!(default_params)
       end
 
-      it { should contain_class('openstacklib::repo::rdo') }
-      it { should contain_class('openstacklib::repo::epel') }
+      it { should contain_class('stacktira::repo::rdo') }
+      it { should contain_class('stacktira::repo::epel') }
 
       it { should contain_yumrepo('CentOS-Base')}
       it { should contain_yumrepo('CentOS-Updates')}
@@ -65,7 +65,7 @@ describe 'openstacklib::repo' do
         params.merge!(default_params)
       end
 
-      it { should contain_class('openstacklib::repo::uca')}
+      it { should contain_class('stacktira::repo::uca')}
       it { should_not contain_class('apt')}
     end
 
@@ -75,7 +75,7 @@ describe 'openstacklib::repo' do
                                 :apt_proxy_port => '8000'})
       end
 
-      it { should contain_class('openstacklib::repo::uca') }
+      it { should contain_class('stacktira::repo::uca') }
       it { should contain_class('apt') }
     end
   end

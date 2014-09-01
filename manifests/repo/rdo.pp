@@ -1,8 +1,8 @@
 # RDO repo (supports Grizzly on both RHEL-alikes and Fedora, requires EPEL)
-class openstacklib::repo::rdo(
+class stacktira::repo::rdo(
   $release = 'havana'
 ) {
-  include openstacklib::repo::epel
+  include stacktira::repo::epel
 
   $release_cap = capitalize($release)
 
@@ -27,7 +27,7 @@ class openstacklib::repo::rdo(
       notify   => Exec['yum_refresh'],
     }
     file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-RDO-${release_cap}":
-      source => "puppet:///modules/openstacklib/RPM-GPG-KEY-RDO-${release_cap}",
+      source => "puppet:///modules/stacktira/RPM-GPG-KEY-RDO-${release_cap}",
       owner  => root,
       group  => root,
       mode   => '0644',

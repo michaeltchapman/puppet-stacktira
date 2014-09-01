@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::ceilometer
+# == Class: stacktira::firewall::ceilometer
 #
 # Sets firewall rules for Ceilometer
 #
@@ -14,7 +14,7 @@
 #   (optional) The port to open for ceilometer_api
 #   Defaults to 8777
 #
-class openstacklib::firewall::ceilometer(
+class stacktira::firewall::ceilometer(
   $source,
   $internal_source = undef,
   $ceilometer_api  = 8777,

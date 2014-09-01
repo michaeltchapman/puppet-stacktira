@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy::glance
+# == Class: stacktira::loadbalance::haproxy::glance
 #
 # Provides load balancing for glance
 #
@@ -59,7 +59,7 @@
 #   listen section for internal comms
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy::glance(
+class stacktira::loadbalance::haproxy::glance(
   $vip,
   $cluster_addresses,
   $cluster_names,
@@ -75,7 +75,7 @@ class openstacklib::loadbalance::haproxy::glance(
 )
 {
   if $glance_port {
-    openstacklib::loadbalance::haproxy_service { 'glance-api':
+    stacktira::loadbalance::haproxy_service { 'glance-api':
       vip               => $vip,
       balancer_ports    => $glance_port,
       listen_options    => $listen_options,
@@ -89,7 +89,7 @@ class openstacklib::loadbalance::haproxy::glance(
   }
 
   if $registry_port {
-    openstacklib::loadbalance::haproxy_service { 'glance-registry':
+    stacktira::loadbalance::haproxy_service { 'glance-registry':
       vip               => $vip,
       balancer_ports    => $registry_port,
       listen_options    => $listen_options,
@@ -104,7 +104,7 @@ class openstacklib::loadbalance::haproxy::glance(
 
   if $internal_vip {
     if $glance_port {
-      openstacklib::loadbalance::haproxy_service { 'glance-api-internal':
+      stacktira::loadbalance::haproxy_service { 'glance-api-internal':
         vip               => $internal_vip,
         balancer_ports    => $glance_port,
         listen_options    => $listen_options,
@@ -118,7 +118,7 @@ class openstacklib::loadbalance::haproxy::glance(
     }
 
     if $registry_port {
-      openstacklib::loadbalance::haproxy_service { 'glance-registry-internal':
+      stacktira::loadbalance::haproxy_service { 'glance-registry-internal':
         vip               => $internal_vip,
         balancer_ports    => $registry_port,
         listen_options    => $listen_options,

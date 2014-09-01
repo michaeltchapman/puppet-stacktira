@@ -9,7 +9,7 @@
 # (optional) The interface to use for provider network
 # Defaults to undef
 #
-class openstacklib::openstack::provider(
+class stacktira::openstack::provider(
   $interface = undef
 )
 {

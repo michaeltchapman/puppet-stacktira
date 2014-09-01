@@ -1,5 +1,5 @@
 # Ubuntu Cloud Archive repo (supports either Folsom or Grizzly)
-class openstacklib::repo::uca(
+class stacktira::repo::uca(
   $release = 'havana',
   $repo    = 'updates'
 ) {

@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::edeploy
+# == Class: stacktira::firewall::edeploy
 #
 # Sets firewall rules for edeploy
 #
@@ -26,7 +26,7 @@
 #   (optional) The port to open for edeploy http services
 #   Defaults to 80
 #
-class openstacklib::firewall::edeploy(
+class stacktira::firewall::edeploy(
   $source,
   $dhcp_port    = 53,
   $tftp_port    = 69,

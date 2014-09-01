@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy
+# == Class: stacktira::loadbalance::haproxy
 #
 # Sets up haproxy as a loadbalancer on an internal
 # and a public interface, and create a virtual IP
@@ -48,7 +48,7 @@
 #   is not currently in any official repos.
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy (
+class stacktira::loadbalance::haproxy (
   $cluster_public_vip,
   $cluster_private_vip,
   $vip_secret,

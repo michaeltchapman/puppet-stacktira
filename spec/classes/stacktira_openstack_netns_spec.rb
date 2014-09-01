@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'openstacklib::openstack::netns' do
+describe 'stacktira::openstack::netns' do
 
   describe 'with network namespace support not present' do
     let :facts do

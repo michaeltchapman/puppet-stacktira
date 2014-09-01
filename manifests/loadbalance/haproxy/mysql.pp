@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy::mysql
+# == Class: stacktira::loadbalance::haproxy::mysql
 #
 # Provides load balancing for mysql.
 #
@@ -60,7 +60,7 @@
 #   the address of the master
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy::mysql
+class stacktira::loadbalance::haproxy::mysql
 (
   $vip,
   $cluster_addresses,
@@ -102,7 +102,7 @@ class openstacklib::loadbalance::haproxy::mysql
 
     $int_addresses = delete($cluster_addresses, $master_address)
     $int_names     = delete($cluster_names, $master_name)
-    openstacklib::loadbalance::haproxy_service { 'mysql':
+    stacktira::loadbalance::haproxy_service { 'mysql':
       vip               => $vip,
       balancer_ports    => $ports,
       listen_options    => $listen_options,
@@ -113,7 +113,7 @@ class openstacklib::loadbalance::haproxy::mysql
       cluster_names     => $int_names
     }
   } else {
-    openstacklib::loadbalance::haproxy_service { 'mysql':
+    stacktira::loadbalance::haproxy_service { 'mysql':
       vip               => $vip,
       balancer_ports    => $ports,
       listen_options    => $listen_options,

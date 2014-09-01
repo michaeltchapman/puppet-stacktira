@@ -1,4 +1,4 @@
-# == Class: openstacklib::firewall::puppet
+# == Class: stacktira::firewall::puppet
 #
 # Sets firewall rules for puppet master
 #
@@ -14,7 +14,7 @@
 #   (optional) The port to open for puppet master
 #   Defaults to 8140
 #
-class openstacklib::firewall::puppet(
+class stacktira::firewall::puppet(
   $source,
   $puppet_master = 8140,
 )

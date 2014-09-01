@@ -1,4 +1,4 @@
-# == Class: openstacklib::loadbalance::haproxy::rabbitmq
+# == Class: stacktira::loadbalance::haproxy::rabbitmq
 #
 # Provides load balancing for rabbitmq
 # This module is unnecessary since clients are cluster
@@ -48,7 +48,7 @@
 #   balancer member in haproxy.
 #   Defaults to undef
 #
-class openstacklib::loadbalance::haproxy::rabbitmq
+class stacktira::loadbalance::haproxy::rabbitmq
 (
   $vip,
   $cluster_addresses,
@@ -65,7 +65,7 @@ class openstacklib::loadbalance::haproxy::rabbitmq
   $balancer_cookie    = undef,
 )
 {
-  openstacklib::loadbalance::haproxy_service { 'rabbitmq':
+  stacktira::loadbalance::haproxy_service { 'rabbitmq':
     vip               => $vip,
     balancer_ports    => $ports,
     listen_options    => $listen_options,
